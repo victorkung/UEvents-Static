@@ -1,0 +1,166 @@
+/* Global Styles*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* Layouts */
+header {
+	position: fixed;
+	top: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 100;
+	background-color: #800000;
+	border-bottom: 1px solid rgba(0,0,0,0.15)
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/bg2.jpg');
+	background-size: cover;
+}
+
+.main-home aside {
+	float: left;
+	width: 48%;
+	height: 90%;
+	color: white;
+	border: 3px solid white;
+}
+
+.main-home section {
+	float: left;
+	position: relative;
+	left: 1%;
+	width: 50%;
+	height: 90%;
+	border: 3px solid white;
+}
+
+.home-footer{
+	bottom: 30px;
+	font-size: 11px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.home-footer a {
+	color: white;
+}
+
+.home-footer ul {
+	display: inline-block;
+	width: auto;
+	list-style: none;
+}
+
+.home-footer li {
+	margin: 0 8px 0 0;
+	display: inline;
+}
+
+/* Homepage */
+
+.logo {
+	float: left;
+	position: relative;
+	top: 11px;
+	left: 30px;
+	width: 500px;
+}
+
+.logo img {
+	width: 30px;
+	float: left;
+}
+
+h1 {
+	position: relative;
+	float: left;
+	left: 12px;
+	top: 3px;
+}
+
+h1 a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.home-btns {
+	position: relative;
+	float: right;
+	top: 10px;
+	right: 30px;
+}
+
+header button{
+	font-size: 16px;
+	width: 100px;
+	height: 30px;
+	margin-left: 15px;
+	color: white;
+	border: none;
+	
+	/* Remember to condense this with SCSS*/
+	border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+}
+
+#login {
+	background-color: #8F3931
+}
+
+#login:hover {
+	background-color: #B1746F;
+}
+
+#signup {
+	background-color: #8A9045;
+}
+
+#signup:hover {
+	background-color: #ADB17D;
+}
+
+.main-home aside h2 {
+	padding-top: 200px;
+	padding-left: 110px;
+	padding-bottom: 30px;
+	font-size: 34px;
+}
+
+.welcome-message {
+	position: relative;
+	padding-top: 10px;
+	padding-left: 110px;
+	font-size: 21px;
+	line-height: 31px
+	/*font-weight: 300;*/
+}
+
