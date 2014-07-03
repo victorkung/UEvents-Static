@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="body-homepage">
 
 	<header>
 		<div class="logo">
@@ -19,34 +19,41 @@
 			<h1><a href="home.html">UEvents | Nationwide Network for College Events</a></h1>
 		</div>
 		<div class="home-btns">
-			<button id="signup">Sign Up</button>
-			<button id="login">Log In</button>
+			<button class="button-small dark-blue-bg">Sign Up</button>
+			<button class="button-small red-bg" style="margin-left: 15px;">Log In</button>
 		</div>
 	</header>
 
-	<main class="main-home">
+	<div class="bg-home">
+	</div>
+
+	<div class="main-home">
 		<aside>
 			<h2>Never miss out on cool events!</h2>
 			<div class="welcome-message">
-				<p>Find all the campus events happening at our partner universities in one location. Filter events by type and receive event recommendations based on your preferences.</p> 
+				<p>Find all the campus events happening at our partner universities in one location. Sort events by type and receive event recommendations based on your preferences.</p> 
 			</div>
 		</aside>
 		<section>
-			
+			<iframe src="http://player.vimeo.com/video/98447652?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="video-home"></iframe>
+			<button class="button-large dark-blue-bg"><a href="find_school.html">Find Your School</a></button>
 		</section>
 		
-		<footer class="home-footer">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Terms of Service</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">FAQs</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
+		<footer class="footer-home">
+		 <ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="tos.html">Terms of Service</a></li>
+			<li><a href="privacy.html">Privacy Policy</a></li>
+			<li><a href="faq.html">FAQs</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		 </ul>
 		</footer>
-	</main>
+	</div>
 
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/events.js"></script>	
 </body>
 
 </html>

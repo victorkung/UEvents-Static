@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <meta content="UEvents is your discovery platform for finding all the events happening on your college campus." name="description"/>
+ <title>UEvents | Discovery Platform & Campus Event Finder for College Students</title>
+ <link rel="shortcut icon" href="img/favicon.png">
+ <link rel="stylesheet" href="css/reset.css">
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="home.html"><img src="img/logo.png" alt="UEvents Logo"></a>
+			<h1><a href="home.html">UEvents | Nationwide Network for College Events</a></h1>
+		</div>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<h2 class="heading">Frequently Asked Questions</h2>
+		
+			<p><strong>Where do these events come from?</strong></p>
+			<br>
+			<p>Using Facebook's <a href="https://developers.facebook.com/docs/reference/api/">Graph API</a>, we are able to retreive data from Facebook and store them in our database. We pull events from our users who have granted us permission to do so.</p>
+			<br>
+			<br>
+			
+			<p><strong>What information do you access when I log in?</strong></p>
+			<br>
+			<p>When a user clicks Get Started, we ask for two permissions. Firstly, we ask for access to your basic information, including your name, email, year, profile picture, friends, as well as the events that you and your friends from the same university are attending. This is how we populate our website with relevant events - by getting relevant events through your social circle!</p>
+			<br>
+			<p>Secondly, we provide the option to manage events for you - this means that our users can sync their Facebook so that when they RSVP to an event on our website they will also be RSVP'd on Facebook.</p>
+			<br>
+			<br>
+
+			<p><strong>Can I RSVP to Facebook events from UEvents?</strong></p>
+			<br>
+			<p>Yes, you can RSVP and un-RSVP to events from our events page by clicking the RSVP button for a given event. You can see all the events you are currently attending to on your "MyEvents" sidebar on the left hand side of the main events page.</p>
+			<br>
+			<br>
+			
+			<p><strong>If I'm attending a private event, does it show up here?</strong></p>
+			<br>
+			<p>No. We only store public events and disregard all Facebook events that are marked as friends-of-guests or invite-only. Our system isn't perfect so we also have administrators who manually go through each event to make sure that we are respecting the privacy of event hosts. If we accidentally leave an event on our website that shouldn't be on there, please <a href="contact.html">contact us</a>.</p>
+			<br>
+			<br>
+		
+			<p><strong>I created an event for a page. Will it show up here?</strong></p>
+			<br>
+			<p>Our system refreshes and pulls events from our users and their univesity friends every 30 minutes. Try searching for your event in our search bar on the top of the webpage. If your event is not there, feel free to <a href="contact.html">let us know</a> and we'll add your event to the list.</p>
+			<br>
+			<br>
+			
+			<p><strong>How do you filter events so that only relevant events are displayed?</strong></p>
+			<br>
+			<p>Our system checks the relevancy of events based on the number of students from your university attending the given event. Additionally, we manually go through the events in our database to double check that the relevant events are displayed and that we are respecting the privacy of event hosts.</p>
+			<br>
+			<br>
+			
+			<p>The last update to our FAQ was posted on February 6, 2014.</p>
+			<br>
+			<br>
+			
+			<footer class="text-blue">
+				 <ul>
+					 <li><a href="home.html">Home</a></li>
+					 <li><a href="about.html">About</a></li>
+					 <li><a href="tos.html">Terms of Service</a></li>
+					 <li><a href="privacy.html">Privacy Policy</a></li>
+					 <li><a href="faq.html">FAQs</a></li>
+					 <li><a href="contact.html">Contact Us</a></li>
+			 	</ul>
+			</footer>
+			<br>
+			
+		</div>
+
+	 </main>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/events.js"></script> 
+</body>
+
+</html>
+
