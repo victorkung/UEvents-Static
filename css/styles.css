@@ -20,25 +20,43 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #B1746F;
 }
 
-.dark-blue-bg {
+.blue-bg {
 	background-color: #155F83;
 }
 
-.dark-blue-bg:hover {
+.blue-bg:hover {
 	background-color: #5B8FA8;
+}
+
+.green-bg {
+	background-color: #8A9045;
+}
+
+.green-bg:hover {
+	background-color: #ADB17D;
+}
+
+.yellow-bg {
+	background-color: #CC8214;
+}
+
+.yellow-bg:hover {
+	background-color: #FFB547;
+}
+
+.orange-bg {
+	background-color: #C16622;
+}
+
+.orange-bg:hover {
+	background-color: #D49464
 }
 
 
 /* Global Styles*/
-.wrapper {
-	position: relative;
-	top: 75px;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 980px;
-}
-
 button {
+	position: relative;
+	
 	/*Condense with SCSS*/
 	border-radius: 3px; 
 	-moz-border-radius: 3px; 
@@ -49,8 +67,28 @@ button {
 	-webkit-transition: background-color 0.5s ease;
 }
 
+button a {
+	color: white;
+}
+
 button:hover {
 	cursor: pointer;
+}
+
+.button-small {
+	font-size: 16px;
+	width: 125px;
+	height: 30px;
+	color: white;
+	border: none;
+}
+
+
+.button-large {
+	font-size: 26px;
+	width: 325px;
+	height: 60px;
+	border: none;
 }
 
 a {
@@ -73,18 +111,27 @@ header {
 	border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
+.wrapper {
+	position: relative;
+	top: 75px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 980px;
+}
+
 .bg-home {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	background-image: url('../img/bg1.jpg');
 	background-size: cover;
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 main, .main-home {
 	position: relative;
 	width: 100%;
+	min-width: 1280px;
 	min-height: 100%;
 	height: auto;
 }
@@ -93,20 +140,9 @@ main {
 	background-color: white;
 }
 
-.main-home aside {
-	float: left;
-	width: 48%;
-	height: 90%;
+.main-home {
+	text-align: center;
 	color: white;
-	text-align: center;
-}
-
-.main-home section {
-	float: left;
-	position: relative;
-	width: 50%;
-	height: 90%;
-	text-align: center;
 }
 
 footer {
@@ -163,7 +199,6 @@ h1 a {
 	color: #fff;
 	font-size: 20px;
 	text-decoration: none;
-	font-weight: 300;
 }
 
 .home-btns {
@@ -173,47 +208,33 @@ h1 a {
 	right: 30px;
 }
 
-.button-small {
-	font-size: 16px;
-	width: 100px;
-	height: 30px;
-	color: white;
-	border: none;
-}
-
-.main-home aside h2 {
-	padding-top: 200px;
-	padding-left: 75px;
+.main-home  h2 {
+	position: relative;	
+	top: 190px;
 	padding-bottom: 30px;
-	font-size: 34px;
+	font-size: 40px;
 }
 
 .welcome-message {
 	position: relative;
-	padding: 10px 0 40px 100px;
-	text-align: left;
-	font-size: 21px;
-	line-height: 31px;
+	top: 180px;
+	margin: auto;
+	width: 1000px;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 35px;
 }
 
-.video-home {
-	margin-top: 175px;
-	margin-bottom: 30px;
+.play-video {
+	top: 245px;
 }
 
-.button-large {
-	font-size: 26px;
-	width: 325px;
-	height: 60px;
-	border: none;
+.signup {
+	top: 246.5px;
 }
 
-.button-large a {
-	color: white;
-}
-
-#signup-large:hover {
-	background: #5B8FA8;
+.play-video {
+	margin-right: 50px;
 }
 
 .heading {
