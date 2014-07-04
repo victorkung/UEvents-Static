@@ -98,6 +98,7 @@ main {
 	width: 48%;
 	height: 90%;
 	color: white;
+	text-align: center;
 }
 
 .main-home section {
@@ -181,16 +182,16 @@ h1 a {
 }
 
 .main-home aside h2 {
-	padding-top: 225px;
-	padding-left: 100px;
+	padding-top: 200px;
+	padding-left: 75px;
 	padding-bottom: 30px;
 	font-size: 34px;
 }
 
 .welcome-message {
 	position: relative;
-	padding-top: 10px;
-	padding-left: 100px;
+	padding: 10px 0 40px 100px;
+	text-align: left;
 	font-size: 21px;
 	line-height: 31px;
 }
@@ -201,9 +202,9 @@ h1 a {
 }
 
 .button-large {
-	font-size: 24px;
-	width: 300px;
-	height: 50px;
+	font-size: 26px;
+	width: 325px;
+	height: 60px;
 	border: none;
 }
 
