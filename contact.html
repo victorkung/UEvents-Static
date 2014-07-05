@@ -11,7 +11,7 @@
  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="bg-wallpaper">
 
 	<header>
 		<div class="logo">
@@ -20,12 +20,18 @@
 		</div>
 	</header>
 
-	<main>
-		<div class="wrapper">
-			<h2 class="heading">Contact Us</h2>
-		
-		
-		</div>
+	<div class="main-wrapper" style="height: 90%;">
+		<h2 class="heading">Contact Us</h2>
+	
+		<p>If you have any questions, issues or comments please don't hesitate to reach out to us. If you would also like to request for us to launch at your school let us know as well! We'll do our best to get back to you as soon as possible</p>
+
+		<form action="#" class="contact-form">
+			<input type="text" placeholder="Your Name" id="name">
+			<input type="email" placeholder="Your Email" id="email">
+			<input type="text" placeholder="Subject" id="subject">
+			<textarea name="message" id="message" placeholder"Let us know what you think! Your message will be sent to team@uevents.io"></textarea>
+			<button class="button-large red-bg"><a href="#">Submit</a></button>
+		</form>
 
 		<footer class="footer-home text-blue">
 			 <ul>
@@ -39,7 +45,7 @@
 				<li><a href="#">&copy; UEvents 2014</a></li>
 		 	</ul>
 		</footer>
-	 </main>
+	 </div>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
