@@ -53,11 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grey-bg {
-	background-color: #878c90;
+	background-color: #aaa;
 }
 
 .grey-bg:hover {
-	background-color: #aaa
+	background-color: #D6D6CE
 }
 
 
@@ -101,6 +101,11 @@ button:hover {
 
 a {
 	text-decoration: none;
+}
+
+strong {
+	color: #8F3931;
+	font-size: 18px;
 }
 
 
@@ -148,8 +153,8 @@ main, .main-home {
 	height: 90%;
 	height: auto;
 	width: 100%;
-	max-width: 950px;
-	border: 1px solid #ccc;
+	max-width: 875px;
+	border: 1px solid #D6D6CE;
 	background-color: white
 }
 
@@ -180,11 +185,29 @@ footer li {
 }
 
 .footer-home{
+	left: 0;
 	bottom: 25px;
 	position: absolute;
 }
 
+.left-side {
+	position: fixed;
+	margin: 0;
+	height: 100%;
+	width: 250px;
+	text-align: center;
+	border: 2px solid #D6D6CE;
+}
 
+.main-events {
+	float: left;
+	position: absolute;
+	left: 250px;
+	/*margin: 50px 0 0 0;*/
+	padding-left: 25px;
+	width: 800px;
+	/*min-height: 300px;*/
+ }
 
 /* Homepage */
 
@@ -199,6 +222,14 @@ footer li {
 .logo img {
 	width: 30px;
 	float: left;
+}
+
+.logo select {
+	height: 20px;
+	margin-left: 20px;
+	margin-top: 8px;
+	border: 0;
+	font-size: 14px;
 }
 
 h1 {
@@ -276,7 +307,7 @@ ul.schools-list {
 }
 
 ul.schools-list:nth-of-type(2) {
-	margin-left: 100px;
+	margin-left: 59px;
 }
 
 ul.schools-list li {
@@ -320,4 +351,197 @@ input[type=submit] {
 	margin: auto;
 	margin-top: 25px;
 }
+
+
+/* Events */
+.search {
+	float: left;
+	position: relative;
+	left: 175px;
+}
+
+.search input {
+	width: 200px;
+	height: 20px;
+	margin-top: 16px;
+	padding-left: 10px;
+	padding-bottom: 2px;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}
+
+nav {
+	float: left;
+	position: relative;
+	top: 12px;
+	left: 400px;
+}
+
+nav ul li {
+	display: inline;
+	float: left;
+	padding: 5px 10px;
+	margin-left: 5px;
+	transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+	border-radius: 3px	;
+
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li:nth-child(2) {
+	position: relative;
+}
+
+nav ul li:hover {
+	background-color: #8F3931;
+}
+
+nav img {
+	display: inline;
+}
+
+nav a {
+	color: white;
+}
+
+nav .select {
+	background-color: #B1746F;
+}
+
+nav .select:hover {
+	background-color: #B1746F;
+}
+
+.subheading {
+	position: relative;
+	font-size: 20px;
+	font-weight: 600;
+	color: #8A9045;
+}
+
+.search-tags {
+	position: relative;
+	float: right;
+	right: -2px;
+	top: 80px;
+	color: white;
+}
+
+.search-tags table {
+	width: 235px;
+	border-radius: 10%;
+	font-size: 18px;
+}
+
+.search-tags table tr {
+	cursor: pointer;
+	border-bottom: 2px solid #D6D6CE;
+	transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+}
+
+.search-tags table tr:last-of-type {
+	border-bottom: none;
+}
+
+.search-tags table td {
+	padding: 5px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+.search-tags .select {
+	color: black;
+	border: 2px solid #D6D6CE;
+	border-right: 2px solid white;
+	background-color: white;
+}
+
+.search-tags .select td {
+	font-weight: normal;
+}
+
+.search-calendar {
+	float: left;
+	position: relative;
+	top: 100px;
+}
+
+.day_number {
+	cursor: pointer;
+}
+
+.previous-month {
+	padding-right: 1em;
+}
+
+.next-month {
+	padding-left: 1em;
+} 
+
+.search-calendar h2 {
+	padding-bottom: 2px;
+	padding-top: 1px;
+	font-weight: 500;
+	font-size: 0.9em;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.search-calendar, .calendar {
+	width: 100%;
+}
+
+.calendar {
+	position: relative;
+	height: 128px;
+	border: 1px solid #ccc;
+}
+
+.calendar th {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	font-size: 0.7em;
+	color: #aaa;
+	background-color: #eee;
+	text-align: center;
+}
+
+.calendar td {
+	font-size: 0.75em;
+	text-align: center;
+}
+
+.selected {
+	padding: 0px;
+	margin-top: -1px;
+	background: #D49464 !important;
+	border: 1px dashed #ccc;
+}
+
+.today div {
+	padding: 0px;
+	margin-top: -1px;
+	background: #aaa;
+	border: 1px dashed #ccc;
+}
+
+.not-current-month {
+	color: #ccc;
+}
+
+
+
+/* Main Events */
 
