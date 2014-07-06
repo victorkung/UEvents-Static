@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grey-bg:hover {
-	background-color: #D6D6CE
+	background-color: #ccc
 }
 
 
@@ -91,6 +91,13 @@ button:hover {
 	border: none;
 }
 
+.button-med {
+	font-size: 20px;
+	width: 180px;
+	height: 45px;
+	color: white;
+	border: none;
+}
 
 .button-large {
 	font-size: 26px;
@@ -108,6 +115,12 @@ strong {
 	font-size: 18px;
 }
 
+.group:after {
+	content: "";
+	display: table;
+	clear: both;''
+}
+
 
 /* Layouts */
 .body-homepage {
@@ -119,7 +132,7 @@ header {
 	top: 0;
 	height: 50px;
 	width: 100%;
-	z-index: 100;
+	z-index: 1000;
 	background-color: #800000;
 	border-bottom: 1px solid rgba(0,0,0,0.15);
 }
@@ -143,6 +156,7 @@ main, .main-home {
 	min-width: 1280px;
 	min-height: 100%;
 	height: auto;
+	overflow-x: hidden;
 }
 
 .main-wrapper {
@@ -154,13 +168,35 @@ main, .main-home {
 	height: auto;
 	width: 100%;
 	max-width: 875px;
-	border: 1px solid #D6D6CE;
+	border: 1px solid #ccc;
 	background-color: white
 }
 
 .main-home {
 	text-align: center;
 	color: white;
+}
+
+.left-side {
+	position: fixed;
+	margin: 0;
+	height: 100%;
+	min-width: 250px;
+	width: 20%;
+	width: ;
+	text-align: center;
+	border: 2px solid #ccc;
+}
+
+.main-events {
+	float: left;
+	position: absolute;
+	left: 250px;
+	padding: 53px 35px 0 35px;
+	width: 70%;
+	min-width: 980px;
+	height: auto;
+	min-height: 99%;
 }
 
 footer {
@@ -190,24 +226,7 @@ footer li {
 	position: absolute;
 }
 
-.left-side {
-	position: fixed;
-	margin: 0;
-	height: 100%;
-	width: 250px;
-	text-align: center;
-	border: 2px solid #D6D6CE;
-}
 
-.main-events {
-	float: left;
-	position: absolute;
-	left: 250px;
-	/*margin: 50px 0 0 0;*/
-	padding-left: 25px;
-	width: 800px;
-	/*min-height: 300px;*/
- }
 
 /* Homepage */
 
@@ -222,6 +241,7 @@ footer li {
 .logo img {
 	width: 30px;
 	float: left;
+	border-radius: 3px;
 }
 
 .logo select {
@@ -442,7 +462,7 @@ nav .select:hover {
 
 .search-tags table tr {
 	cursor: pointer;
-	border-bottom: 2px solid #D6D6CE;
+	border-bottom: 2px solid #ccc;
 	transition: background-color 0.5s ease;
 	-o-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
@@ -456,18 +476,17 @@ nav .select:hover {
 .search-tags table td {
 	padding: 5px 0;
 	text-align: center;
-	font-weight: 300;
 }
 
 .search-tags .select {
 	color: black;
-	border: 2px solid #D6D6CE;
-	border-right: 2px solid white;
 	background-color: white;
+	border: 2px solid #ccc;
+	border-right: 2px solid white;
 }
 
 .search-tags .select td {
-	font-weight: normal;
+	font-weight: bold;
 }
 
 .search-calendar {
@@ -545,3 +564,131 @@ nav .select:hover {
 
 /* Main Events */
 
+.event-day-wrapper {
+	float: left;
+	position: relative;
+}
+
+.event-day {
+	position: absolute;
+	top: 0;
+	width: 95%;
+	min-width: 950px;
+	margin: 0;
+	padding: 15px 0 7px 15px;
+	font-size: 20px;
+	font-weight: 600;
+	z-index: 100;
+	color: #8F3931;
+	background-color: white;
+	border-bottom: 2px solid #ccc;
+}
+
+.event-group {
+	width: 100%;
+	margin: auto;
+	padding-top: 60px;
+}
+
+.event-card {
+	float: left;
+	margin: 0;
+	padding: 15px 0 10px 10px;
+	height: 125px;
+	width: 98%;
+	min-width: 950px;
+	border-bottom: 1px solid #ccc;
+}
+
+.event-card:hover {
+	background-color: #eee;
+	transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+}
+
+.event-card:first-child {
+	margin-top: 10px;
+}
+
+.event-card:last-child {
+	margin-bottom: 15px;
+}
+
+.event-card figure {
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+
+.event-small-pic {
+	position: relative;
+	width: 165px;
+	height: 100px;
+}
+
+.event-card figcaption {
+	padding-top: 5px;
+	color: #444;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.event-info {
+	float: left;
+	padding-left: 5px;
+	width: 55%;
+	min-width: 500px;
+}
+
+.event-title {
+	float: left;
+	position: relative;
+	top: -5px;
+	width: 100%;
+	color: #8A9045;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.event-tags {
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.event-tags ul {
+	padding-left: 5px;
+}
+
+.event-tags li {
+	display: inline;
+	left: 0;
+	margin-left: 0;
+	padding: 3px 10px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.event-attendance {
+	float: left;
+	padding-left: 7px;
+	width: 100%;
+	font-size: 18px;
+	color: #444;
+}
+
+.event-attendance strong {
+	font-size: 26px;
+	color: #888;
+}
+
+.event-card button {
+	position: relative;
+	top: 40px;
+}
