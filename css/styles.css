@@ -2,7 +2,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
-body, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, figure, figcaption {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #ccc
 }
 
+.white-bg {
+	background-color: white !important;
+}
+
 
 /* Global Styles*/
 button, .mobile-download {
@@ -111,7 +115,6 @@ a {
 }
 
 strong {
-	color: #8F3931;
 	font-size: 18px;
 }
 
@@ -192,7 +195,7 @@ main, .main-home {
 	float: left;
 	position: absolute;
 	left: 250px;
-	padding: 53px 35px 0 35px;
+	padding: 53px 35px 0 30px;
 	width: 70%;
 	min-width: 980px;
 	height: auto;
@@ -656,9 +659,9 @@ nav .select:hover {
 .event-tags {
 	float: left;
 	width: 100%;
-	font-size: 16px;
+	font-size: 15px;
 	margin-top: 15px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .event-tags ul {
@@ -674,6 +677,7 @@ nav .select:hover {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
+
 
 .event-attendance {
 	float: left;
@@ -692,3 +696,113 @@ nav .select:hover {
 	position: relative;
 	top: 40px;
 }
+
+#back {
+	position: absolute;
+	top: 65px;
+	right: 100px;
+}
+
+.event-banner {
+	position: relative;
+	top: 55px;
+	width: 87%;
+	min-width: 850px;
+	height: 325px;
+	margin: auto;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #eee;
+}
+
+.event-banner figure {
+	width: 100%;
+	height: 275px;
+}
+
+.event-banner figure img {
+	width: 100%;
+	height: 100%;
+}
+
+.event-banner figure figcaption {
+	position: absolute;
+	bottom: 45px;
+	width: 500px;
+	height: 50px;
+	padding-left: 25px;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -0.5px
+}
+
+.event-banner li, .event-show-info p {
+	color: #444;
+}
+
+.event-buttons {
+	position: relative;
+	float: right;
+	top: 10px;
+	right: 25px;
+}
+
+.event-show-info, .event-friends {
+	float: left;
+	position: relative;
+	top: 75px;
+	height: 123px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #eee;
+}
+
+.event-show-info {
+	left: 63px;
+	width: 44%;
+	min-width: 425px;
+}
+
+.event-show-info p {
+	padding: 10px 0 10px 10px;
+	font-size: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.event-show-info p:last-child {
+	border-bottom: none;
+}
+
+.event-friends {
+	left: 90px;
+	width: 40%;
+	min-width: 380px;
+	text-align: center;
+}
+
+.event-friends strong {
+	position: relative;
+	top: 15px;
+	color: #155F83;
+	font-size: 28px;
+}
+
+.event-friends p {
+	padding: 12px;
+}
+
+.event-description {
+	position: relative;
+	top: 100px;
+	width: 87%;
+	min-width: 850px;
+	height: auto;
+	margin: auto;
+	text-align: left;
+}
+
+.event-description p {
+	float: left;
+	margin-bottom: 25px;
+} 
