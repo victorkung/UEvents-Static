@@ -154,6 +154,10 @@ header {
 	background-image: url('../img/soft_wallpaper.png');
 }
 
+.bg-wallpaper strong {
+	color: #8F3931;
+}
+
 main, .main-home {
 	position: relative;
 	width: 100%;
@@ -185,9 +189,8 @@ main, .main-home {
 	position: fixed;
 	margin: 0;
 	height: 100%;
-	min-width: 250px;
+	min-width: 260px;
 	width: 20%;
-	width: ;
 	text-align: center;
 	border: 2px solid #ccc;
 }
@@ -494,7 +497,6 @@ nav .select:hover {
 }
 
 .search-calendar {
-	float: left;
 	position: relative;
 	top: 100px;
 }
@@ -517,12 +519,14 @@ nav .select:hover {
 	font-weight: 500;
 	font-size: 0.9em;
 	text-align: center;
-	border-top: 1px solid #ccc;
+	border: 1px solid #ccc;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.search-calendar, .calendar {
-	width: 100%;
+.search-calendar, .calendar, .search-calendar h2 {
+	width: 95%;
+	min-width: 230px;
+	margin: auto;
 }
 
 .calendar {
@@ -591,7 +595,7 @@ nav .select:hover {
 .event-group {
 	width: 100%;
 	margin: auto;
-	padding-top: 60px;
+	padding-top: 50px;
 }
 
 .event-card {
@@ -622,14 +626,14 @@ nav .select:hover {
 
 .event-card figure {
 	float: left;
-	width: 180px;
+	width: 210px;
 	text-align: center;
 }
 
 .event-small-pic {
 	position: relative;
-	width: 165px;
-	height: 100px;
+	width: 195px;
+	height: 120px;
 }
 
 .event-card figcaption {
@@ -649,7 +653,7 @@ nav .select:hover {
 .event-title {
 	float: left;
 	position: relative;
-	top: -5px;
+	top: -2px;
 	width: 100%;
 	color: #8A9045;
 	font-size: 19px;
@@ -661,12 +665,12 @@ nav .select:hover {
 	float: left;
 	width: 100%;
 	font-size: 15px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .event-tags ul {
-	padding-left: 5px;
+	padding-left: 3px;
 }
 
 .event-tags li {
@@ -674,23 +678,23 @@ nav .select:hover {
 	left: 0;
 	margin-left: 0;
 	padding: 3px 10px;
+	font-style: italic;
 	background-color: #eee;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
 
 
-.event-attendance {
+.event-location, .event-time {
 	float: left;
-	padding-left: 7px;
+	padding-left: 2px;
 	width: 100%;
 	font-size: 18px;
 	color: #444;
 }
 
-.event-attendance strong {
-	font-size: 26px;
-	color: #888;
+.event-time {
+	margin-bottom: 2px;
 }
 
 .event-card button {
@@ -701,7 +705,7 @@ nav .select:hover {
 #back {
 	position: absolute;
 	top: 65px;
-	right: 100px;
+	left: 94px;
 }
 
 .event-banner {
