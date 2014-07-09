@@ -60,8 +60,16 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #ccc
 }
 
+.light-grey-bg {
+	background-color: #ccc;
+}
+
+.light-grey-bg:hover {
+	background-color: #ddd;
+}
+
 .white-bg {
-	background-color: white !important;
+	background-color: #f6f6f6 !important;
 }
 
 
@@ -469,7 +477,7 @@ nav .select:hover {
 
 .search-tags table tr {
 	cursor: pointer;
-	border-bottom: 2px solid #ccc;
+	border-bottom: 2px solid #ddd;
 	transition: background-color 0.5s ease;
 	-o-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
@@ -486,7 +494,7 @@ nav .select:hover {
 }
 
 .search-tags .select {
-	color: black;
+	color: #444;
 	background-color: white;
 	border: 2px solid #ccc;
 	border-right: 2px solid white;
@@ -497,8 +505,10 @@ nav .select:hover {
 }
 
 .search-calendar {
+	float: left;
 	position: relative;
 	top: 100px;
+	padding-left: 6px;
 }
 
 .day_number {
@@ -513,7 +523,14 @@ nav .select:hover {
 	padding-left: 1em;
 } 
 
+.search-calendar, .calendar, .search-calendar h2 {
+	width: 95%;
+	min-width: 230px;
+	margin: auto;
+}
+
 .search-calendar h2 {
+	width: 94%;
 	padding-bottom: 2px;
 	padding-top: 1px;
 	font-weight: 500;
@@ -523,11 +540,6 @@ nav .select:hover {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.search-calendar, .calendar, .search-calendar h2 {
-	width: 95%;
-	min-width: 230px;
-	margin: auto;
-}
 
 .calendar {
 	position: relative;
@@ -664,7 +676,7 @@ nav .select:hover {
 .event-tags {
 	float: left;
 	width: 100%;
-	font-size: 15px;
+	font-size: 16px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -678,16 +690,18 @@ nav .select:hover {
 	left: 0;
 	margin-left: 0;
 	padding: 3px 10px;
-	font-style: italic;
-	background-color: #eee;
+	background-color: #f6f6f6;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
 
+.event-banner .event-tags {
+	margin-top: 15px;
+}
 
 .event-location, .event-time {
 	float: left;
-	padding-left: 2px;
+	padding-left: 3px;
 	width: 100%;
 	font-size: 18px;
 	color: #444;
@@ -735,7 +749,7 @@ nav .select:hover {
 	bottom: 45px;
 	width: 500px;
 	height: 50px;
-	padding-left: 25px;
+	padding-left: 15px;
 	color: white;
 	font-size: 24px;
 	font-weight: bold;
@@ -750,7 +764,7 @@ nav .select:hover {
 	position: relative;
 	float: right;
 	top: 10px;
-	right: 25px;
+	right: 10px;
 }
 
 .event-show-info, .event-friends {
