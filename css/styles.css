@@ -355,8 +355,8 @@ main, .main-home {
 	padding: 30px 50px 0 50px;
 	margin: 0 auto;
 	height: auto;
-	width: 100%;
-	max-width: 950px;
+	width: 77.5%;
+	min-width: 950px;
 	border: 1px solid #ccc;
 	background-color: white
 }
@@ -375,6 +375,7 @@ main, .main-home {
 	text-align: center;
 	border-right: 1px solid #ccc;
 	background-color: #f4f4f4;
+	z-index: 500;
 }
 
 .main-events {
@@ -420,11 +421,10 @@ footer li {
 /* Homepage */
 
 .logo {
-	float: left;
-	position: relative;
+	position: absolute;
 	top: 11px;
 	left: 30px;
-	width: 500px;
+	width: 125px;
 }
 
 .logo img {
@@ -455,9 +455,8 @@ h1 a {
 }
 
 .home-btns {
-	position: relative;
-	float: right;
-	top: 10px;
+	position: absolute;
+	top: 11px;
 	right: 30px;
 }
 
@@ -652,6 +651,7 @@ ul.schools-list a:hover {
 
 .panel, .panel-fixed {
 	width: 100%;
+	min-width: 1280px;
 	height: 545px;
 	text-align: center;
 	background-size: cover;
@@ -693,38 +693,38 @@ ul.schools-list a:hover {
 
 .team-profile {
 	float: left;
-	width: 350px;
+	width: 360px;
 }
 
 .team-profile img {
 	float: left;
-	width: 110px;
-	margin-right: 20px;
+	width: 115px;
+	margin-top: 10px;
+	margin-right: 15px;
 	border-radius: 50%;
 }
 
 .team-profile figcaption {
 	float: left;
-	width: 200px;
+	width: 215px;
 	text-align: left;
 }
 
 .name {
-	padding: 8px 0 5px 0;
+	padding-bottom: 5px;
 	font-size: 16px;
 	font-weight: bold;
 }
 
 .bio {
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 16px;
 }
 
 /* Events */
 .search {
-	float: left;
-	position: relative;
-	left: 200px;
+	position: absolute;
+	left: 535px;
 }
 
 .search input {
@@ -739,10 +739,9 @@ ul.schools-list a:hover {
 }
 
 nav {
-	float: left;
-	position: relative;
+	position: absolute;
 	top: 12px;
-	left: 475px;
+	right: 50px;
 }
 
 nav ul li {
