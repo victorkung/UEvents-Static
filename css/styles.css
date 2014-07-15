@@ -477,7 +477,7 @@ h1 a {
 	position: relative;
 	top: 170px;
 	margin: auto;
-	width: 1000px;
+	width: 1080px;
 	font-size: 24px;
 	font-weight: 300;
 	line-height: 35px;
@@ -689,11 +689,16 @@ ul.schools-list a:hover {
 	width: 360px;
 }
 
+.team-picture {
+	float: left;
+	width: 115px;
+	margin-right: 10px;
+}
+
 .team-profile img {
 	float: left;
 	width: 115px;
-	margin-top: 10px;
-	margin-right: 15px;
+	margin-bottom: 7px;
 	border-radius: 50%;
 }
 
@@ -703,8 +708,13 @@ ul.schools-list a:hover {
 	text-align: left;
 }
 
+.job-image {
+	margin-right: 10px;
+	margin-top: 15px;
+}
+
 .name {
-	padding-bottom: 5px;
+	padding: 5px 0;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -712,6 +722,7 @@ ul.schools-list a:hover {
 .bio {
 	font-size: 14px;
 	line-height: 16px;
+	padding-bottom: 5px;
 }
 
 /* Events */
