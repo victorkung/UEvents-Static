@@ -134,7 +134,7 @@ strong {
 .group:after {
 	content: "";
 	display: table;
-	clear: both;''
+	clear: both;
 }
 
 .no-scroll {
@@ -286,8 +286,8 @@ color: white;
 }
 
 .table-wrapper td {
-	border-bottom: 1px solid $lightGrey;
-	border-right: 1px solid $lightGrey;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
 }
 
 .table-wrapper td:last-child {
@@ -323,13 +323,19 @@ header {
 	border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
-.bg-home {
+.bg-home, .bg-panel {
 	position: fixed;
 	width: 100%;
-	height: 100%;
-	background-image: url('../img/bg1.jpg');
 	background-size: cover;
+}
+
+.bg-home {
+	height: 100%;
 	opacity: 0.7;
+}
+
+.bg-panel {
+	height: 545px;
 }
 
 .bg-wallpaper {
@@ -649,27 +655,14 @@ ul.schools-list a:hover {
 
 /* About, Jobs & Internships */
 
-.panel, .panel-fixed {
+.panel {
+	float: left;
+	position: relative;
 	width: 100%;
 	min-width: 1280px;
 	height: 545px;
 	text-align: center;
 	background-size: cover;
-}
-
-.panel {
-	float: left;
-	position: relative;
-	z-index: 50;
-}
-
-.panel-fixed {
-	position: fixed;
-}
-
-.panel-offset-top {
-	position: relative;
-	top: 545px;
 }
 
 .mini-heading {
@@ -1046,7 +1039,7 @@ nav .select:hover {
 #back {
 	position: absolute;
 	top: 65px;
-	left: 94px;
+	left: 82px;
 }
 
 .event-banner {
@@ -1241,4 +1234,13 @@ nav .select:hover {
 
 .settings form {
 	margin-bottom: 5px;
+}
+
+
+/* Responsive */
+
+@media all and (max-width: 500px) {
+	#hire {
+		display: none;
+	}
 }
