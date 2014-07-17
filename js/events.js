@@ -17,7 +17,7 @@ function changeBackground() {
 		});
 		$('.bg-home').fadeIn(1000);
 	});
-	setTimeout(changeBackground, 6000);
+	setTimeout(changeBackground, 8000);
 }
 
 
