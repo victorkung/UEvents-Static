@@ -331,15 +331,27 @@ header {
 	border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
-.bg-home, .bg-panel {
+.bg-home-wrapper, .bg-panel {
 	position: fixed;
 	width: 100%;
 	background-size: cover;
 }
 
-.bg-home {
+.bg-home-wrapper {
 	height: 100%;
+	background-color: black;
+}
+
+.bg-home-img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-image: url(../img/bg1.jpg);
+}
+
+.bg-home-img{
 	opacity: 0.7;
+
 }
 
 .bg-panel {
@@ -407,6 +419,7 @@ footer {
 	font-size: 14px;
 	text-align: center;
 	width: 100%;
+	margin-bottom: 25px;
 }
 
 footer a {
@@ -425,9 +438,17 @@ footer li {
 }
 
 .footer-home{
-	left: 0;
-	bottom: 25px;
 	position: absolute;
+	left: 125px; 
+	bottom: 25px;
+	width: 650px; 
+	margin-bottom: 0;
+}
+
+.footer-float {
+	float: left; 
+	margin: 30px 0 25px 0; 
+	min-width: 1280px;
 }
 
 

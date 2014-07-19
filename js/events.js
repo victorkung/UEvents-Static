@@ -11,11 +11,11 @@ function changeBackground() {
 	if (currentBackground > 1) {
 		currentBackground = 0;
 	}
-	$('.bg-home').fadeOut(1000, function() {
-		$('.bg-home').css( {
+	$('.bg-home-img').fadeOut(1000, function() {
+		$('.bg-home0img').css( {
 			'background-image' : "url('" + backgrounds[currentBackground] + "')"
 		});
-		$('.bg-home').fadeIn(1000);
+		$('.bg-home-img').fadeIn(1000);
 	});
 	setTimeout(changeBackground, 8000);
 }
