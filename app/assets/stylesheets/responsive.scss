@@ -1,0 +1,12 @@
+@media all and (max-width: 500px) {
+	.footer-homepage { width: 850px; top: 50px; left: 225px; padding-bottom: 50px; } 
+	.mobile-download-wrapper { 	
+		width: 500px; 
+		left: 50%; 
+		-webkit-transform: translateX(-50%); 
+		-ms-transform: translateX(-50%); 
+		transform: translateX(-50%); 
+		margin-bottom: 25px;
+		a:first-child { margin-left: 15px; margin-right: 25px; }
+	}
+}

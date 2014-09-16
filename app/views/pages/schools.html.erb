@@ -1,0 +1,31 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+</header>
+
+<main class="bg-wallpaper" style="height: 100%">
+
+	<div class="main-wrapper" style="height: 100%;">
+		<h2 class="heading">Our Partner Universities</h2>
+
+		<form action="#" class="fb-form">
+			<p style="text-align: left; padding: 0 0 0 40px;">List of universities we are currently servicing:</p>
+			<br>
+			<li>Northwestern University</li>
+			<li>University of Chicago</li>
+			<li>University of Illinois - Urbana Champaign</li>
+			<br>
+			<br>
+			<%= link_to "Can't Find Your School?", contact_path, class: "button button-xlarge red-bg" %>
+			<%#= link_to "Get Started", facebook_path, class: "button button-xlarge blue-bg", style: "margin-left: 30px;" %>
+
+		</form>
+
+		<div class="footer-abs-wrapper">
+			<%= render 'shared/footer' %>
+		</div>
+
+	 </div>
+</main>

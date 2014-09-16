@@ -1,0 +1,31 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+</header>
+
+<main class="bg-wallpaper" style="height: 100%;">
+
+	<div class="main-wrapper" style="height: 100%;">
+		<h2 class="heading">Sync Your Facebook Account</h2>
+
+		<form action="#" class="fb-form" style="height: 325px">
+			<p style="text-align: left; padding: 0 0 0 40px;">Our app only works if you connect your Facebook account. This is why you should sync your account:</p>
+			<br>
+			<li>Simple, one-click Login</li>
+			<li>Easily see the number of your friends attending an event</li>
+			<li>Instantly share events with your friends</li>
+			<li>RSVP to an event on Facebook through our site to Facebook (this is what it means when Facebook asks you to "Let UEvents manage your events")</li>
+		</form>
+		
+		<div style="margin: auto; width: 325px;">
+			<button class="button button-xlarge blue-bg" onclick="fb_login();" style="margin: auto;">Let's Do This.</button>
+		</div>
+
+		<div class="footer-abs-wrapper">
+			<%= render 'shared/footer' %>
+		</div>
+    
+	 </div>
+</main>

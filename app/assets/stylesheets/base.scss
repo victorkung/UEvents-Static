@@ -1,0 +1,439 @@
+//  GLOBAL VARIABLES, MIXINS, CLASSES
+
+
+$red: #8F3931;
+$red-light: #B1746F;
+$blue: #155F83;
+$blue-light: #5B8FA8;
+$green: #8A9045;
+$green-light: #ADB17D;
+$yellow: #CC8214;
+$yellow-light: #FFB547;
+$orange: #C16622;
+$orange-light: #D49464;
+$maroon: #800000;
+$black: #444;
+
+.thinFont { font-family: "HelveticaNeue-Thin", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  letter-spacing: 0.5px; }
+$lightFont: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+.regularFont { font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+.red-bg { background-color: $red; }
+.red-bg:hover { background-color: $red-light; }
+.blue-bg { background-color: $blue; }
+.blue-bg:hover { background-color: $blue-light; }
+.green-bg { background-color: $green; }
+.green-bg:hover { background-color: $green-light; }
+.yellow-bg { background-color: $yellow; }
+.yellow-bg:hover { background-color: $yellow-light; }
+.orange-bg { background-color: $orange; }
+.orange-bg:hover { background-color: $orange-light; }
+.grey-bg { background-color: #bbb; }
+.grey-bg:hover { background-color: #ddd; }
+
+@mixin transition($speed: 0.5s) {
+	transition: all $speed ease;
+	-o-transition: all $speed ease;
+	-moz-transition: all $speed ease;
+	-webkit-transition: all $speed ease;
+}
+@mixin hover-scale($scale: 1.01) {
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	transform: scale($scale);
+}
+@mixin border-radius($radius: 3px) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+@mixin position($position, $top, $right, $bottom, $left) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+.inline-list {
+	display: inline;
+	list-style: none;
+}
+
+.vertical-align, .horizontal-align {
+	position: relative;
+}
+
+.vertical-align {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontal-align{
+	left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.loading-gif {
+	@extend .horizontal-align;
+	top: 40%;
+	z-index: 100;
+	position: fixed;
+	font-size: 25px;
+	padding: 12px 16px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	display: none;
+	border: 2px solid #ccc;
+}
+
+
+// BASE STYLES
+body, html { height: 100%;}
+body {color: $black;}
+body, h1, h2, h3, h4, h5, h6 { font-family: $lightFont; letter-spacing: 0px; font-weight: normal;}
+// h1, h2, h3, h4, h5, h6,  { @extend  .thinFont; font-weight: normal; }
+a { text-decoration: none; color: $blue;}
+i { font-weight: bold; position: relative; }
+strong { font-size: 18px; }
+::-webkit-input-placeholder { font-family: $lightFont; letter-spacing: 0px; font-weight: normal; }
+:-moz-placeholder {font-family: $lightFont; letter-spacing: 0px; font-weight: normal; }  /* Firefox 18- */
+::-moz-placeholder { font-family: $lightFont; letter-spacing: 0px; font-weight: normal; }  /* Firefox 19+ */
+:-ms-input-placeholder { font-family: $lightFont; letter-spacing: 0px; font-weight: normal; }
+ 
+ .clear {
+ 	clear: both;
+ }
+
+// Buttons
+button, .button, .mobile-download, input[type=submit] { position: relative; text-align: center; @include border-radius; @include transition;}
+button:hover, input[type=submit]:hover { cursor: pointer; }
+a.button, .search-tags a, .admin-search-tags a { display: inline-block; color: white; }
+.search-tags a, .admin-search-tags a { width: 100%; }
+a.button {letter-spacing: 0.5px;}
+.button-small {
+	font-size: 16px;
+	width: 125px;
+	padding: 5px 0;
+	color: white;
+	border: none; }
+.button-med {
+	font-size: 16px;
+	width: 145px;
+	padding: 10px 0;
+	color: white;
+	border: none; }
+.button-large {
+	font-size: 22px;
+	width: 235px;
+	height: 50px;
+	color: white;
+	border: none; }
+.button-xlarge {
+	font-size: 26px;
+	width: 325px;
+	padding: 12px 0;
+	color: white;
+	border: none; }
+
+// Forms
+.input-field { margin-bottom: 20px; }
+.input-field:last-of-type { margin-bottom: 30px; }
+label {
+	float: left;
+	width: 100px;
+	padding-right: 20px;
+	font-size: 20px;
+	text-align: left; }
+input[type="password"], .overlay input[type="email"] {
+	width: 200px;
+	height: 25px;
+	padding-left: 5px;
+	font-size: 16px; }
+
+
+// Alert Boxes
+.alert-box {
+	float: left;
+	position: relative;
+	width: 88%;
+	max-width: 1200px;
+	padding: 10px 10px 10px 90px;
+	margin: 10px 0;
+	@include border-radius(10px);
+	span { float: left; padding-right: 130px; font-weight:bold; text-transform:uppercase; }
+	ul { float: left;  list-style-type: disc; }
+}
+.error {
+    background: #ffecec asset-data-url('error.png') no-repeat 55px 13px;
+    border: 1px solid #f5aca6;
+}
+.success {
+    background: #e9ffd9 asset-data-url('success.png') no-repeat 55px 13px;
+    border: 1px solid #a6ca8a;
+}
+.warning {
+    background: #fff8c4 asset-data-url('warning.png') no-repeat 55px 13px;
+    border: 1px solid #f2c779;
+}
+.notice {
+    background: #e3f7fc asset-data-url('notice.png') no-repeat 50px 13px;
+    border: 1px solid #8ed9f6;
+}
+
+// Example HTML for Alert Boxes
+// <div class="alert-box error"><span>error: </span>Write your error message here. <div class="close-btn">X</div></div>
+// <div class="alert-box success"><span>success: </span>Write your success message here. <div class="close-btn">X</div></div>
+// <div class="alert-box warning"><span>warning: </span>Write your warning message here. <div class="close-btn">X</div></div>
+// <div class="alert-box notice"><span>notice: </span>Write your notice message here. <div class="close-btn">X</div></div>
+
+//  Error Messages
+.error-message {
+	position: relative;
+	@extend .horizontal-align;
+	top: 30%;
+	width: 700px;
+	height: 125px;
+	padding: 20px 30px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background-color: rgba(255,255,255, 0.7);
+}
+
+.error-head {
+  color: $maroon;
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+
+// LAYOUTS
+
+header {
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	min-width: 1280px;
+	z-index: 1000;
+	background-color: $maroon;
+}
+.logo {
+	width: 125px;
+	@include position(absolute, 11px, 0px, 0px, 30px);
+	> * {float : left; }
+	img { width: 30px; @include border-radius; }
+	select { height: 23px; color: #555; margin: 6px 0 0 20px; border: 0; font-size: 16px; @extend .regularFont;}
+	h1 { font-size: 20px; color: white; @include position(relative, 5px, 0px, 0px, 10px);
+			a { color: #fff; text-decoration: none; @extend .regularFont; }}
+	h1:last-of-type { padding-left: 8px; }
+}
+.home-btns { position: absolute; top: 11px; right: 30px; }
+
+
+// Containers
+main {
+	position: relative;
+	width: 100%;
+	min-height: 700px;
+	min-width: 1280px;
+}
+
+.main-wrapper {
+	position: relative;
+	height: auto;
+	width: 77.5%;
+	max-width: 1280px;
+	min-width: 1000px;
+	margin: 0px auto;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	p { padding: 0 50px; }
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+.left-side {
+	position: fixed;
+	margin: 0;
+	height: 100%;
+	width: 230px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	z-index: 500;
+}
+
+.main-events {
+	float: right;
+	position: relative;
+	padding: 53px 0 0 0;
+	width: 1015px;
+	height: auto;
+	min-height: 99%;
+}
+
+
+// To-Do: Go Through All Footers to Establish Uniform
+footer {
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 25px;
+	a, li { color: #5B8FA8; }
+	ul { display: inline-block; width: auto;}
+	li { margin: 0 15px 0 0; @extend .inline-list; }
+}
+
+.footer-abs-wrapper {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+}
+
+.footer-homepage{
+	width: 700px;
+	padding-bottom: 0;
+	a, li {color: white;}
+	@include position(relative, 0, 0, 0, 75px);
+}
+
+
+// Overlay
+
+.overlay {
+	@include position(fixed, 0, 0, 0, 0);
+	padding-top: 50px;
+	width: 100%;
+	min-height: 100%;
+	z-index: 200;
+	overflow: hidden;
+	background-color: rgba(227, 224, 226, 0.7);
+
+	 /* Overlay Scaling Effect*/
+	 visibility: hidden;
+	 opacity: 0;
+}
+
+.overlay-scale {
+	 -webkit-transform: scale(0.9);
+	 transform: scale(0.9);
+	 @include transition(0.2s);
+}
+
+.open {
+	 visibility: visible;
+	 opacity: 1;
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	@include transition;
+}
+
+.close-btn {
+	position: absolute;
+	color: #888;
+	right: 20px;
+	top: 11px;
+	cursor: pointer;
+	z-index: 300;
+}
+
+#close-btn img {
+	 width: 40px;
+}
+
+.overlay-main {
+	position: relative;
+	top: 60px;
+	width: 860px;
+	height: auto;
+	min-height: 70%;
+	margin: auto;
+}
+
+.overlay-content-wrapper{
+	float: left;
+	position: relative;
+	margin: auto;
+	width: 100%;
+	min-height: 375px;
+	height: auto;
+	padding: 25px 0 25px 25px;
+	@include border-radius;
+	background-color: #f8f8f8;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+
+
+
+/* Events */
+.search {
+	position: absolute;
+	left: 535px;
+}
+
+.search input {
+	width: 200px;
+	height: 20px;
+	margin-top: 16px;
+	padding-left: 10px;
+	padding-bottom: 2px;
+	font-size: 12px;
+	border: none;
+	@include border-radius;
+	background-image: asset-data-url('search-icon-small.png');
+	background-repeat: no-repeat;
+	text-indent: 25px;
+}
+
+nav {
+	position: absolute;
+	top: 10px;
+	right: 50px;
+	font-size: 18px;
+}
+
+nav ul li {
+	@extend .inline-list;
+	float: left;
+	padding: 5px 10px;
+	margin-left: 5px;
+	@include transition;
+	@include border-radius;
+
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li:nth-child(2) {
+	position: relative;
+}
+
+nav ul li:hover {
+	background-color: #B1746F;
+}
+
+nav img {
+	display: inline;
+}
+
+nav a {
+	color: white;
+}
+
+nav .select {
+	background-color: #B1746F;
+}
+
+nav .select:hover {
+	background-color: #B1746F;
+}

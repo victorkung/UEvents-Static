@@ -1,0 +1,24 @@
+window.Page = {
+
+  currentBackground: 0
+  backgrounds: ["<%= asset_path('bg1.jpg') %>", "<%= asset_path('bg2.jpg') %>"]
+
+  changeBackground: ->
+    Page.currentBackground += 1
+    $('.bg-home-img').fadeOut 1000, ->
+      $('.bg-home-img').css('background-image' : "url('" + Page.backgrounds[Page.currentBackground % 2] + "')")
+      $('.bg-home-img').fadeIn 1000
+}
+
+jQuery ->
+   $('.tip').tipr()
+
+  # Lightbox Popup
+  $('.video-lightbox').magnificPopup(type: 'iframe')
+
+$(document).ready ->
+  $(".video-lightbox").magnificPopup type: "iframe"
+
+
+  # Background Change
+  window.setInterval (-> Page.changeBackground();), 8000

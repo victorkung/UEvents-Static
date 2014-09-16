@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: uevents_development
+  pool: 5
+  username: uevents
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: uevents_test
+  pool: 5
+  username: uevents
+  password:

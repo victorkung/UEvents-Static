@@ -1,0 +1,211 @@
+// Homepage
+
+.home-bg-wrapper {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	min-width: 1280px;
+	background-color: black;
+	background-size: cover;
+}
+
+.bg-home-img {
+	width: 100%;
+	height: 100%;
+	min-width: 1280px;
+	opacity: 0.6;
+	background-size: cover;
+	background-image: asset-data-url('bg1.jpg');
+}
+
+.bg1 { background-image: asset-data-url('bg3.jpg'); }
+.bg2{ background-image: asset-data-url('bg4.jpg'); }
+.bg-wallpaper { background-image: asset-data-url('soft_wallpaper.png'); }
+
+
+.panel-fixed {
+	height: 545px;
+	z-index: -50;
+	position: fixed;
+	width: 100%;
+	background-size: cover;
+}
+
+.bg-wallpaper p {
+	font-size: 18px    // Font Styling for About pages
+}
+
+.bg-wallpaper strong {
+	color: #8F3931;  // Sets blue color for bolded elements in Pages
+}
+
+.panel {
+	float: left;
+	position: relative;
+	width: 100%;
+	min-width: 1280px;
+	height: 545px;
+	text-align: center;
+	background-size: cover;
+}
+
+.mini-heading {
+	position: relative;
+	width: 225px;
+	margin: auto;
+	top: 75px;
+	padding-bottom: 5px;
+	color: $orange-light;
+	font-weight: bold;
+	clear: both;
+	border-bottom: 1px solid #ccc;
+	text-transform: uppercase;
+}
+
+.panel-title {
+	position: relative;
+	top: 185px;
+	padding-bottom: 30px;
+	font-size: 40px;
+}
+
+.panel-subtitle {
+	position: relative;
+	top: 180px;
+	margin: auto;
+	width: 1020px;
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 35px;
+}
+
+.play-video {
+	margin-right: 50px
+}
+
+
+.mobile-download-wrapper {
+	width: 425px;
+	img:hover { @include hover-scale(1.05); }
+	@include position(relative, 25px, 0, 0, 755px);
+	@include transition;
+}
+
+.mobile-download:first-of-type {
+	margin-right: 20px;
+}
+
+.team-wrapper {
+	position: relative;
+	top: 225px;
+	margin: auto;
+	width: 1080px;
+	clear: both;
+}
+
+.team-profile {
+	float: left;
+	width: 360px;
+	margin-bottom: 30px
+}
+
+.team-picture {
+	float: left;
+	width: 115px;
+	margin-right: 10px;
+}
+
+.team-profile img {
+	float: left;
+	width: 115px;
+	margin-bottom: 7px;
+	@include border-radius(50%);
+}
+
+.team-profile figcaption {
+	float: left;
+	width: 215px;
+	text-align: left;
+}
+
+.job-image {
+	margin-right: 10px;
+	margin-top: 15px;
+}
+
+.name {
+	padding: 5px 0;
+	font-size: 16px;
+	@extend .regularFont;
+}
+
+.bio {
+	font-size: 15px;
+	line-height: 16px;
+	padding-bottom: 5px;
+}
+
+.heading {
+	position: relative;
+	margin-top: 80px;
+	margin-bottom: 25px;
+	font-size: 40px;
+	color: #888;
+	text-align: center;
+}
+
+.contact-form {
+	padding-top: 10px;
+	margin: auto;
+	width: 500px;
+	text-align: center;
+	button {z-index: 100;}
+}
+
+.fb-form {
+	@extend .contact-form;
+	position: relative;
+	top: 25px;
+	width: 800px;
+	height: 425px;
+	border: none;
+	p, li { font-size: 22px;}
+	button, a.button { top: 25px; }
+	button:first-of-type { margin-right: 25px;}
+	li {  margin: 0 0 7px 75px; text-align: left;}
+	li:last-of-type { margin-bottom: 25px;}
+}
+
+
+#name, #email, #message, #subject, #password, #password2, #select-school, #event-id, #fbpage-url, #org-type {
+	margin-top: 25px;
+	padding: 5px 0	 5px 10px;
+	font-size: 14px;
+	height: 20px;
+	width: 400px;
+	border: 1px solid #aaa;
+}
+
+#org-type {
+	height: auto !important;
+}
+
+#select-school {
+	width: 415px;
+	height: 30px;
+	background-color: white;
+	margin-bottom: 50px;
+	font-size: 14px;
+	color: #aaa;
+}
+
+#message {
+	margin-bottom: 25px;
+	height: 125px;
+}
+
+input[type=submit] {
+	display: block;
+	margin: auto;
+	margin-top: 25px;
+}

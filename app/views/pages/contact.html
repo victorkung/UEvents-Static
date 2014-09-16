@@ -1,0 +1,27 @@
+<header>
+  <div class="logo">
+    <%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+    <h1><%= link_to "UEvents", root_url %></h1>
+  </div>
+</header>
+
+<main class="bg-wallpaper" style="height: 100%;">
+
+  <div class="main-wrapper" style="height: 100%;">
+    <h2 class="heading">We'd Love To Hear From You</h2>
+    <p>If you have any questions or feedback for us please don't hesitate to reach out to us. If you cannot find your school and would like to help us  launch at your school let us know as well! </p>
+    
+    <form action="#" class="contact-form">
+      <input type="text" placeholder="Your Name" id="name">
+      <input type="email" placeholder="Your Email" id="email">
+      <input type="text" placeholder="Subject" id="subject">
+      <textarea name="message" id="message" placeholder"Let us know what you think! Your message will be sent to team@uevents.io"></textarea>
+      <%= submit_tag "Submit", class: "button button-med red-bg" %>
+    </form>
+
+    <div class="footer-abs-wrapper">
+      <%= render 'shared/footer' %>
+    </div>
+    
+ </div>
+</main>

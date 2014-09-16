@@ -1,0 +1,31 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+</header>
+
+<main class="bg-wallpaper" style="height: 100%;">
+
+	<div class="main-wrapper" style="height: 90%;">
+		<h2 class="heading">Sign Up to See the Event!</h2>
+
+		<form action="#" class="fb-form">
+			<p style="text-align: left; padding: 0 0 0 40px;">Simply connect your Facebook account and get access to all the events on our system. Benefits include:</p>
+			<br>
+			<li>Seeing the number of your friends attending an event</li>
+			<li>Being able to instantly share events with your friends</li>
+			<li>RSVP to an event on Facebook through our site to Facebook (this is what it means when Facebook asks you to "Let UEvents manage your events")</li>
+			<br>
+			<br>
+			<button class="button-xlarge blue-bg" onclick="fb_login();"><%= link_to "Let's Go!", "#" %></button>
+
+		</form>
+
+		<br>
+		<br>
+		<br>
+		<%= render 'shared/footer' %>
+
+	 </div>
+</main>

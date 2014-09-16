@@ -1,0 +1,210 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+	<nav>
+		<ul>
+			<li class="select"><%= link_to "About", about_path %></li>
+			<li><%= link_to "Jobs at UEvents", jobs_path %></li>
+		</ul>
+	</nav>
+</header>
+
+	<div class="panel-fixed bg1"></div>
+
+	<div class="panel" style="color: white">
+		<h2 class="panel-title">Redefining Event Discovery</h2>
+		<div class="panel-subtitle" style="width: 795px">
+			<p>We're changing the way in which college students explore local events. Help us achieve our goal.</p>
+		</div>
+		<%= link_to "Join Our Adventure", jobs_path, class: "button button-xlarge blue-bg", style: "top: 225px;" %>
+	</div>
+
+	<div class="panel" style="height: 410px; background-color: #8F3931; color: white">
+		<p class="mini-heading">Our Mission</p>
+		<h2 class="panel-title" style="top: 100px">Bringing Events to You</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>College is  about meeting new people and sharing unforgettable experiences together. We help you create these long-lasting memories by showing you the events both on and off-campus that we think you'll love.</p>
+		</div>
+	</div>
+
+	<div class="panel " style="height: 1300px; background-color: #f8f8f8;">
+		<p class="mini-heading">Meet Our Team</p>
+		<h2 class="panel-title" style="top: 100px">We Dream Big and Stay Hungry</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>Our team is talented and passionate about our work. We're looking for others who believe in our mission and are itching to help make it a reality.</p>
+		</div>
+		<%= link_to "Join Our Adventure", jobs_path, class: "button button-xlarge blue-bg", style: "top: 150px;" %>
+
+		<div class="team-wrapper">
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("victor-profile.jpg", alt: "Victor Kung"), "http://www.victorkung.me", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">CEO</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Victor Kung", "http://www.victorkung.me", target: "_blank" %> </p>
+					<p class="bio">His love for tackling unsolved problems led him into the startup world.  Victor's unofficial mantra is "work hard, play hard,'' though he never seems to get to the latter.</p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to (image_tag "shaan-profile.jpg", alt: "Shaan Sapra" ), "http://www.shaansapra.com", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">CTO</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Shaan Sapra", "http://www.shaansapra.com", target: "_blank" %></p>
+					<p class="bio">With a passion for building cool things, Shaan shares his excitement in entrepreneurship and software as a way of making a difference in the world.</p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("sameet-profile.jpg", alt: "Sameet Sapra"), "http://www.sameetsapra.com/", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Mobile Dev</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Sameet Sapra", "http://www.sameetsapra.com/", target: "_blank" %></p>
+					<p class="bio">Sameet's enthusiasm for a wide range of technologies and his clear vision of the end goal of his projects lead him to put the needs of the user before anything else.</p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("rebecca-profile.jpg", alt: "Rebecca Kural"), "http://www.linkedin.com/pub/rebecca-kural/89/8a5/b37", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Business Dev</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Rebecca Kural", "http://www.linkedin.com/pub/rebecca-kural/89/8a5/b37", target: "_blank" %></p>
+					<p class="bio">Driven by her love of bringing people together, Rebecca sees mobile technology as a means to forge and promote real life social experiences.</p>
+				</figcaption>
+			</figure>
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("saachi-profile.jpg", alt: "Saachi Gupta"), "https://www.linkedin.com/pub/saachi-gupta/69/2b3/a54", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Business Dev</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Saachi Gupta", "https://www.linkedin.com/pub/saachi-gupta/69/2b3/a54", target: "_blank" %></p>
+					<p class="bio">Saachi's enthusiasm for facilitating connections between others drives her interest in social networking technology and passion for helping people access new experiences. </p>
+				</figcaption>
+			</figure>
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("nat-profile.jpg", alt: "Nathaniel Epstein"), "https://www.linkedin.com/pub/nathaniel-epstein/9a/9b1/735", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Marketing</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Nathaniel Epstein", "https://www.linkedin.com/pub/nathaniel-epstein/9a/9b1/735", target: "_blank" %></p>
+					<p class="bio">Always with a keen eye for detail but never forgetting the big picture, Nat looks what is most salient and attractive in marketing campaigns.</p>
+				</figcaption>
+			</figure>
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("matt-profile.jpg", alt: "Matthew Ehinger"), "https://www.linkedin.com/pub/matthew-ehinger/88/a13/4", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">iOS Developer</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Matthew Ehinger", "https://www.linkedin.com/pub/matthew-ehinger/88/a13/4", target: "_blank" %></p>
+					<p class="bio">A CS and Cognitive Science double major at Northwestern, Matt is passionate about building mobile platforms for the masses and enjoys designing user interfaces and creating graphic art.</p>
+				</figcaption>
+			</figure>
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("tzu-profile.jpg", alt: "Tzu-Fang Tseng"), "http://www.tzufang.com/", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Designer</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Tzu-Fang Tseng", "http://www.tzufang.com/", target: "_blank" %></p>
+					<p class="bio">Works as a multi-functional designer in both web and print. With a passion for visual problem-solving, she can’t  focus on only one aspect of ‘graphic design’.</p>
+				</figcaption>
+			</figure>
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("lucas-profile.jpg", alt: "Lucas Frye"), "https://www.linkedin.com/pub/lucas-frye/7b/b20/682", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Field Ops</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Lucas Frye", "https://www.linkedin.com/pub/lucas-frye/7b/b20/682", target: "_blank" %></p>
+					<p class="bio">Engrained in a variety of student involvement initiatives, Lucas thrives on the idea of enhancing experiences through innovative solutions.  To truly accumulate meaningful experiences you have to know about them first.</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<p class="mini-heading" style="top: 275px;">Our Advisors</p>
+
+		<div class="team-wrapper" style="top: 320px;">
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to image_tag("jerry-profile.jpg", alt: "Jerry Huang"), "www.linkedin.com/in/huangjerry", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Strategy</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Jerry Huang", "www.linkedin.com/in/huangjerry", target: "_blank" %> </p>
+					<p class="bio">The Entrepreneurship Director at the University of Chicago, Jerry has extensive VC experience managing $100+ million funds for the MacArthur Foundation.</p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<div class="team-picture">
+					<%= link_to (image_tag "louis-profile.jpg", alt: "Louis Goldman" ), "http://www.linkedin.com/in/louisbgoldman", target: "_blank" %>
+					<p class="bio" style="font-weight: bold;">Legal</p>
+				</div>
+				<figcaption>
+					<p class="name"><%= link_to "Louis Goldman", "http://www.linkedin.com/in/louisbgoldman", target: "_blank" %></p>
+					<p class="bio">Managing Partner at Navigator Law, Louis has vast domestic and international legal experience across realms and has served on the board of numerous startup ventures.</p>
+				</figcaption>
+			</figure>
+		</div>
+
+	</div>
+
+	<div class="panel" style="height: 625px; background-color: #725663; color: white;">
+		<p class="mini-heading">Press & Media</p>
+		<h2 class="panel-title" style="top: 100px">The World Is Taking Notice</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>"You don’t have to be popular to know what’s going on around campus anymore thanks to the new website UChicagoEvents.The site lists University of Chicago Facebook events, from Friday night frat parties to Off-Off Campus shows to academic panels, all in one place."</p>
+			<br>
+			<p style="text-align: right; font-style: italic;"><a href="http://chicagomaroon.com/2013/05/21/all-invited-to-uchicago-events/" style="color: #D49464">— The UChicago Maroon</a></p>
+		</div>
+		<br>
+		<br>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>"UChicagoEvents is a social tool that provides a centralized location for UChicago students to have access to all events happening on campus"</p>
+			<br>
+			<p style="text-align: right; font-style: italic;"><a href="http://www.hercampus.com/school/u-chicago/spotlight-uchicago-events/" style="color: #D49464">— HerCampus</a></p>
+		</div>
+	</div>
+
+
+	<div class="panel" style="height: 785px; background-color: #f8f8f8; margin-bottom: 35px;">
+		<p class="mini-heading">User Testimonies</p>
+		<h2 class="panel-title" style="top: 100px">Our Users Care </h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p style="font-weight: 400">"UEvents is a <b>great resource</b> that allows students to have access to events that would be otherwise unknown to those who are new to campus."</p>
+			<br>
+			<p style="text-align: right; font-style: italic; color: #D49464">— Shoshanna Marie ('17, UChicago)</a></p>
+		</div>
+		<br>
+		<br>
+		<div class="panel-subtitle" style="top: 100px;">
+			<p style="font-weight: 400">"UEvents was <b>perfect for planning the week</b> or <b>spontaneously finding things to do</b> in my free time. It helped me find great speakers who I would have normally missed out on.”</p>
+			<br>
+			<p style="text-align: right; font-style: italic; color: #D49464">— Elizabeth Frank ('16, UChicago)</a></p>
+		</div>
+		<br>
+		<br>
+		<div class="panel-subtitle" style="top: 100px">
+			<p style="font-weight: 400">“UEvents was <b>especially helpful to me as a first year</b> in helping me find events that I would otherwise have missed out on!”</p>
+			<br>
+			<p style="text-align: right; font-style: italic; color: #D49464">— Eloise Hyman ('17, UChicago)</a></p>
+		</div>
+	</div>
+
+</div>
+
+
+<%= render 'shared/footer' %>
+

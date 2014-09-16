@@ -1,0 +1,56 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+	<div class="home-btns">
+	<%= link_to "We're Hiring!", about_path, class: "button button-small red-bg", style: "text-decoration: underline;" %>
+
+		<!-- <button class="button button-small blue-bg" onclick="fb_login();" style="margin-left: 15px;">Login</button> -->
+	</div>
+</header>
+
+
+<div class="home-bg-wrapper">
+	<div class="bg-home-img"></div>
+</div>
+
+<div class="panel" style="color: white; height: 600px;">
+
+		<%= image_tag "logo.png", alt: "UEvents Logo", style: "position: relative; top: 135px; border-radius: 10px", width: "100" %>
+		<h2 class="panel-title">Events You Care About, All In One Place</h2>
+		<div class="panel-subtitle">
+			<p>Find great events both on and off-campus. Receive event suggestions based on your preferences, sort events by city, school, or type and share them with friends! </p>
+		</div>
+
+		<div style="position: relative; top: 240px;">
+			<a class="video-lightbox button button-xlarge yellow-bg" href="https://www.youtube.com/watch?v=60LF5qILYxU"><%= image_tag "play.png", alt: "Play Video", width: "28", style: "position:relative; top: -2px; padding-right: 10px"; %> Watch Our Video</a>
+
+			<%= link_to "Find Your School!", schools_path, class: "button button-xlarge blue-bg", id: "find-school", style: "margin-left: 45px;" %>
+		</div>
+
+</div>
+
+<div class="panel" style="height: auto;">
+	<div class="wrapper">
+		<div class="mobile-download-wrapper">
+			<%= link_to(image_tag "ios.jpg", class: "mobile-download grey-bg", alt: "iOS Download", width: "185") %>
+			<%= link_to(image_tag "android.png", class: "mobile-download grey-bg", alt: "Android Download", width: "185") %>
+		</div>
+
+		<footer class="footer-homepage">
+		<ul>
+			<li><%= link_to "About", about_path %></li>
+	 		<li><%= link_to "Jobs", jobs_path %></li>
+			<li><%= link_to "Schools", schools_path %></li>
+			<li><%= link_to "Terms", tos_path %></li>
+			<li><%= link_to "Privacy", privacy_path %></li>
+			<li><%= link_to "FAQ", faq_path %></li>
+			<li><%= link_to "Contact", contact_path %></li>
+			<li><%= link_to "<i class='fa fa-facebook-square'></i>".html_safe, "https://www.facebook.com/UEvents.io", target: "_blank" %></li>
+			<li><%= link_to "<i class='fa fa-twitter-square'></i>".html_safe, "https://twitter.com/UEventsOfficial", target: "_blank" %></li>
+			<li>&copy; UEvents 2014</li>
+		</ul>
+		</footer>
+	</div>
+</div>

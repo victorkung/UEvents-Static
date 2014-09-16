@@ -1,0 +1,92 @@
+<header>
+	<div class="logo">
+		<%= link_to(image_tag("logo.png", :alt => "logo"), root_url) %>
+		<h1><%= link_to "UEvents", root_url %></h1>
+	</div>
+	<nav>
+		<ul>
+			<li><%= link_to "About", about_path %></li>
+			<li class="select"><%= link_to "Jobs at UEvents", jobs_path %></li>
+		</ul>
+	</nav>
+</header>
+
+	<div class="panel-fixed bg2"></div>
+
+	<div class="panel" style="color: white">
+		<h2 class="panel-title">Get Ready To Be Part Of Something Big</h2>
+		<div class="panel-subtitle" style="width: 900px">
+			<p>We're tackling large problems, and uncertain outcomes lie ahead. Working alongside passionate and talented individuals gives us the confidence to keep moving forward.</p>
+		</div>
+		<%= link_to "View Opportunities", "#jobs-panel", class: "button button-xlarge blue-bg smoothScroll", style: "top: 225px;" %>
+
+	</div>
+
+	<div class="panel" style="height: 390px; background-color: #8F3931; color: white">
+		<p class="mini-heading">Our Benefits</p>
+		<h2 class="panel-title" style="top: 100px">Everything Leads Back to You</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>We provide the opportunity for new members to take up huge responsibility from Day 1. Have a great idea? Go with it! Learn, grow, and make a difference with the talented individuals around you. Benefits include equity options along with flexible work schedules.</p>
+		</div>
+	</div>
+
+	<div id="jobs-panel" class="panel" style="height: 675px; background-color: #f8f8f8;">
+		<p class="mini-heading">How You Can Help</p>
+		<h2 class="panel-title" style="top: 100px">Join Our Team</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>Our team is talented and passionate about our work. We're looking for others who believe in our mission and are itching to help make it a reality.</p>
+			<br>
+			<p>All current positions are based in Chicago and we are looking for interns and full-timers for each position. Click on a position to learn more!</p>
+		</div>
+
+		<div class="team-wrapper" style="top: 175px">
+			<figure class="team-profile">
+				<%= link_to (image_tag "person-icon.png", alt: "Backend Engineer", class: "job-image"), backend_engineer_path %>
+				<figcaption>
+					<p class="name"><%= link_to "Backend Engineer", backend_engineer_path %></p>
+					<p class="bio">We are organizing and making sense of unstructured data in order to unearth and define trends and statistics that enable us to offer personalized and accurate event suggestions.</p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<%= link_to (image_tag "persona-icon.png", alt: "Frontend", class: "job-image"), frontend_path %>
+				<figcaption>
+					<p class="name"><%= link_to "Frontend Developer", frontend_path %></p>
+					<p class="bio">Our website gives us the real estate to display all the rich content we store about users and events without overpowering the user. Help us unlock this potential.  </p>
+				</figcaption>
+			</figure>
+
+			<figure class="team-profile">
+				<%= link_to (image_tag "person-icon.png", alt: "Android", class: "job-image"), mobile_path %>
+				<figcaption>
+					<p class="name"><%= link_to "Mobile Developer", mobile_path %></p>
+					<p class="bio">The future is mobile and so that must be our focus as well. Take advantage of all the unique features of mobile devices and utilize them to their fullest potential.</p>
+				</figcaption>
+			</figure>
+
+		</div>
+
+	</div>
+
+	<div class="panel" style="height: 360px; background-color: #725663; color: white;">
+		<p class="mini-heading">Our Ethos</p>
+		<h2 class="panel-title" style="top: 100px">We Are Proud Of Our Work</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>Honesty, integrity, and humility are the foundations that we believe in. To achieve our mission of redefining student event discovery, we refuse to compromise our values.</p>
+		</div>
+	</div>
+
+	<div class="panel" style="height: 480px; background-color: #f8f8f8; margin-bottom: 35px;">
+		<p class="mini-heading">We'd Love to Hear Back</p>
+		<h2 class="panel-title" style="top: 100px">Feel Free To Reach Out!</h2>
+		<div class="panel-subtitle" style="top: 100px">
+			<p>Interested, have questions, or have feedback for us? Contact us at <%= link_to "team@uevents.io", "mailto:team@uevents.io", style: "font-weight: 400;" %> or through our <%= link_to "contact form", contact_path, style: "font-weight: 400;" %> and we will get back to you as soon as possible!</p>
+			<br>
+			<p>For interested applicants please include the position you are interested in, along with a resume, website or portfolio we can look at just to get to know you better.  Creativity is encouraged!</p>
+		</div>
+
+		</div>
+	</div>
+
+	<%= render 'shared/footer' %>
+

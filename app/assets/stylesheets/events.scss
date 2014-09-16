@@ -1,0 +1,400 @@
+.subheading {
+	position: relative;
+	font-size: 20px;
+	@extend .regularFont;
+	letter-spacing: -0.5px
+}
+
+.admin-search-tags, .search-tags {
+	float: right;
+	color: white;
+	@include position(relative, 80px, -2px, 0, 0);
+}
+
+table.search-tags, table.admin-search-tags {
+	width: 210px;
+	font-size: 18px;
+	margin-right: -1px;
+	a { color: white; }
+	tr { cursor: pointer; @extend .grey-bg; @include transition; border-bottom: 1px solid #eee; }
+	td { padding: 5px 0; text-align: center; }
+	.select { background-color: white; border: 1px solid #ccc; border-right: none; color: #555 !important;
+		a { color: #555 !important; }
+		td { font-weight: bold;}
+	}
+	tr.select:hover { background-color: white; }
+}
+
+.search-calendar { @include position(relative, 95px, 0, 0, 0);
+	h2 {
+		padding: 1px 0 2px 0;
+		font-weight: 500;
+		font-size: 14px;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+}
+
+.like-btn {
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+
+.day_number { cursor: pointer; }
+.previous-month { padding-right: 15px; }
+.next-month { padding-left: 15px; }
+.search-calendar, .calendar, .search-calendar h2 {
+	float: right;
+	width: 210px;
+}
+.calendar {
+	position: relative;
+	height: 128px;
+	border: 1px solid #ccc;
+	border-right: none;
+	th {
+		padding: 1px 0 2px 0;
+		font-weight: bold;
+		font-size: 12px;
+		color: #aaa;
+		background-color: #eee;
+		text-align: center;
+	}
+	td {
+		font-size: 0.75em;
+		text-align: center;
+		color: #555;
+	}
+	.select {
+		padding: 0px;
+		margin-top: -1px;
+		color: white;
+		border: 1px dashed #ccc;
+		background: #D49464 !important;
+	}
+
+	.today div {
+		background: #aaa;
+	}
+
+	.not-current-month {
+		color: #ccc;
+	}
+}
+
+
+
+// Event Index
+
+.event-groups { float: left; }
+
+.event-day-wrapper {
+	float: left;
+	position: relative;
+}
+
+.event-day {
+	position: absolute;
+	width: 95%;
+	min-width: 950px;
+	padding: 13px 0 5px 15px;
+	color: $red;
+	z-index: 100;
+	font-size: 20px;
+	@extend .regularFont;
+	background-color: white;
+	border-bottom: 2px solid #ccc;
+}
+
+.event-group { padding-top: 50px; }
+
+.event-card {
+	position: relative;
+	height: 105px;
+	width: 970px;
+	padding: 10px 0 10px 0px;
+	border-bottom: 1px solid #ccc;
+	@include transition;
+	&:hover {
+		background-color: #eee;
+		cursor: pointer;
+	}
+	&:first-child { margin-top: 5px; }
+	&:last-child { margin-bottom: 15px; }
+}
+
+.event-card figure {
+	float: left;
+	width: 200px;
+	height: 105px;
+	margin: 0 10px 0 15px;
+	background-position: center;
+	background-size: 100% auto;
+}
+
+.bg-placeholder {
+	background-position: initial;
+	background-image: asset-data-url('placeholder.png');
+}
+
+.event-info {
+	float: left;
+	padding-left: 5px;
+	width: 600px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	> div { float: left; width: 100%; margin-bottom: 8px; padding-left: 2px;}
+}
+
+.no-event {
+	padding-left: 25px;
+}
+
+.event-title {
+	margin-bottom: 8px;
+	font-size: 18px;
+	@extend .regularFont;
+	@include position(relative, 0, 0, 0, 0);
+	text-overflow: ellipsis;
+}
+
+.event-location {
+	i { padding-left: 2px; padding-right: 1px;}
+}
+
+.event-tags {
+	li {
+		@extend .inline-list;
+		padding-left: 10px;
+		padding-right: 2px;
+		&:first-of-type{ padding-left: 0px; }
+		i { padding-right: 2px;}
+	}
+}
+
+.event-more-info {
+	color: #ccc;
+	width: 150px;
+	font-size: 22px;
+	@include position(relative, 25px, 0, 0, -25px);
+}
+
+
+
+//  Events Show Page
+.event-banner {
+	float: left;
+	@include position(relative, -5px, 0, 0, 0);
+	width: 875px;
+	height: 450px;
+	left: 50px;
+	border: 1px solid #ccc;
+	@include border-radius;
+}
+
+.event-banner figure {
+	width: 100%;
+	height: 330px;
+	background: no-repeat center;
+	background-size: 100% auto;
+}
+
+.event-banner figcaption {
+	position: absolute;
+	width: 100%;
+	height: 330px;
+	color: white;
+	font-size: 24px;
+	background-color: rgba(0, 0, 0, 0.3);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(102, 105, 105, 0.3)), to(rgba(6, 6, 6, 0.3)));
+	background-image: -webkit-linear-gradient(top, rgba(102, 105, 105, 0.3), rgba(6, 6, 6, 0.3));
+	background-image: -moz-linear-gradient(top, rgba(102, 105, 105, 0.3), rgba(6, 6, 6, 0.3));
+	background-image: -o-linear-gradient(top, rgba(102, 105, 105, 0.3), rgba(6, 6, 6, 0.3));
+	background-image: -ms-linear-gradient(top, rgba(102, 105, 105, 0.3), rgba(6, 6, 6, 0.3));
+	background-image: linear-gradient(top, rgba(102, 105, 105, 0.3), rgba(6, 6, 6, 0.3));
+}
+
+.banner-title, .event-show-tags { @extend .thinFont; }
+
+.banner-title {
+	position: absolute;
+	left: 30px;
+	bottom: 40px;
+	font-size: 26px;
+}
+
+.event-show-tags {
+	position: absolute;
+	left: 22px;
+	bottom: 10px;
+	font-size: 18px;
+	li { @extend .inline-list; padding-left: 10px; margin-left: 0; }
+}
+
+#back {
+	position: absolute;
+	top: 10px;
+	left: 28px;
+	color: white;
+	font-size: 16px;
+	padding: 5px 10px;
+	@include border-radius;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.event-show-info p {
+	color: #555;
+}
+
+.event-banner-info {
+	width: 100%;
+	height: 110px;
+}
+
+.banner-row {
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+
+.event-rsvp {
+	float: left;
+	position: relative;
+	width: 475px;
+	height: 100%;
+	li {
+		@extend .inline-list;
+		float: left;
+		width: 33%;
+		padding-bottom: 11px;
+		padding-top: 11px;
+		text-align: center;
+		font-size: 16px;
+		border-right: 1px solid #ccc;
+		@extend .regularFont;
+		@include transition;
+		a { color: $red-light; }
+		&:hover {
+			cursor: pointer;
+			background-color: $red;
+			a { color: white; }
+		}
+	}
+	.select {
+		background-color: $red;
+		a { color: white; }
+	}
+}
+
+.event-share {
+	position: relative;
+	float: right;
+	height: 100%;
+	width: 400px;
+	a {
+		float: left;
+		margin: 12px 17px;
+		@extend .regularFont;
+		&:hover { color: $blue-light; @include transition; }
+	}
+}
+
+.event-friends {
+	float: left;
+	position: relative;
+	height: 30px;
+	width: 390px;
+	padding: 25px 0;
+	text-align: center;
+	font-size: 16px;
+
+	b {
+		color: #B1746F;
+		font-size: 22px;
+		padding-right: 5px;
+	}
+}
+
+.event-banner-details {
+	float: left;
+	width: 480px;
+	border-left: 1px solid #ccc;
+	padding: 5px 0px;
+	letter-spacing: 0.5px;
+	font-size: 14px;
+	i { padding-right: 0px; padding-left: 15px}
+	p { padding: 0 15px 7px 0;
+		&:first-of-type { padding-top: 2px; }
+		&:nth-of-type(2) i { padding-left: 17px; padding-right: 3px;}
+		&:last-of-type { padding-bottom: 3px;
+			i {padding-left: 19px;  padding-right: 5px}
+		}
+	}
+}
+
+.event-description {
+	float: left;
+	position: relative;
+	top: 25px;
+	left: 50px;
+	width: 870px;
+	height: auto;
+	margin-bottom: 75px;
+}
+
+.event-description p {
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+
+
+/* Profile */
+
+.general-info {
+	float: left;
+	position: relative;
+	margin-top: 100px;
+	width: 475px;
+	padding-right: 50px;
+	margin-bottom: 60px;
+}
+
+.profile-pic {
+	float: left;
+	width: 160px;
+	padding-right: 25px;
+}
+
+.general-info p {
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+.settings {
+	float: left;
+	margin-top: 115px;
+	position: relative;
+	width: 425px;
+}
+
+.settings h3 {
+	padding-bottom: 15px;
+}
+
+.settings input[type="checkbox"] {
+	float: left;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.settings p {
+	display: inline;
+	font-size: 14px;
+}
+
+.settings form {
+	margin-bottom: 5px;
+}

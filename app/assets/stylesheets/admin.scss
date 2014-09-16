@@ -1,0 +1,97 @@
+//  Admin Events Page
+
+.admin-heading {
+	@extend .heading;
+	float: left;
+	width: 100%;
+	margin-top: 0;
+	top: 25px;
+	font-size: 30px;
+	text-align: left;
+	margin-bottom: 75px;
+}
+
+.admin-event-card {
+	@extend .event-card;
+	overflow: auto;
+	height: auto !important;
+	.event-description { display: none; clear: both;  margin-bottom: 25px;}
+}
+
+.admin-form {
+	width: 800px;
+	p { text-align: left;}
+	@extend .contact-form;
+}
+
+.admin-event-tags {
+	li {
+		@extend .inline-list;
+		padding: 3px 8px;
+		background-color: #eee;
+		border: 1px solid #ccc;
+		@include border-radius;
+		font-size: 12px;
+	}
+	li.select{
+		background-color: $green-light;
+	}
+}
+
+.admin-toggle { 
+	position: absolute;
+	width: 180px;
+	top: 50px;
+	right: 5px;
+	bottom: 0;
+}
+.admin-event-btn {
+	color: $black;
+	font-size: 13px;
+	background-color: #fefdff;
+	border: 1px solid #777;
+	padding: 4px 8px;
+	@include border-radius;
+}
+a.admin-event-show { color: #eee; background-color: $green-light; }
+a.admin-event-hide { color: #eee;	background-color: $red-light; }
+
+.admin-tile {
+	float: left;
+	width: 185px;
+	height: 55px;
+	padding: 5px 25px 5px 10px;
+	margin-bottom: 25px;
+	margin-right: 25px;
+	border: 1px solid #ccc;
+}
+
+.user-row {
+	float: left; 
+	width: 100%;
+	margin-top: 25px; 
+	margin-bottom: 50px; 
+}
+
+.data {
+	text-align: right;
+	padding-top: 5px;
+	font-size: 20px;
+	@extend .regularFont;
+}
+
+.current-user {
+	display: inline;
+	font-size: 20px;
+	margin-right: 25px;
+}
+
+.admin-list {
+	width: 80%;
+	max-width: 1200px;
+	tr { border: 1px solid #ccc; }
+	td { border-right: 1px solid #ccc; padding: 10px; }
+	td a:first-of-type{ padding-left: 25px; padding-right: 5px;}
+	td a { color: #555; }
+	// i:hover { cursor: pointer;}
+}
